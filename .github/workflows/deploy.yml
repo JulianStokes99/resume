@@ -37,11 +37,13 @@ jobs:
           cp CV.yaml .portfolio-engine/public/CV.yaml
           echo "✓ Copied CV.yaml"
 
-      - name: Configure theme settings (random theme, no theme bar)
+      - name: Configure theme settings (random theme, no bar, locked to root)
         run: |
           ENV_FILE=".portfolio-engine/.env.production"
           echo "VITE_THEME_SELECTION_MODE=random" >  "$ENV_FILE"
           echo "VITE_SHOW_THEME_BAR=false"         >> "$ENV_FILE"
+          # Pin the URL to "/" and never expose theme-slug sub-pages
+          echo "VITE_LOCK_ROUTE=true"              >> "$ENV_FILE"
           cat "$ENV_FILE"
 
       - name: Setup Node.js
