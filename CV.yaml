@@ -1,0 +1,169 @@
+cv:
+  name: Julian Stokes
+  location: Prince George, BC
+  email: Julian.Stokes99@gmail.com
+  phone: +1-250-876-1811
+  sections:
+    summary:
+      - Health Sciences instructor and MSc candidate with strong leadership ability and experience in data analysis, knowledge synthesis, and stakeholder communication. Skilled in translating complex clinical and research information into actionable insights to support decision-making and system improvement.
+
+    certifications_skills:
+      - label: "Data Analysis"
+        details: "SPSS, R, MATLAB"
+      - label: "Systematic Review Tools"
+        details: "DistillerSR, Covidence"
+      - label: "Data Management"
+        details: "Large dataset management: Excel"
+      - label: "Skills"
+        details: "Knowledge translation and reporting; Health research and evidence synthesis; Rapid learning of new software systems; Presentations and public speaking; Project management and team building"
+
+    education:
+      - institution: University of Northern British Columbia
+        area: Health Sciences
+        degree: M.Sc.
+        location: Prince George, BC
+        start_date: 2021-09
+        end_date: 2026-05
+        highlights:
+          - Current 4.33 GPA
+          - Expected Graduation 2026
+
+      - institution: University of Northern British Columbia
+        area: Biomedical Studies (Honours)
+        degree: B.HSc.
+        location: Prince George, BC
+        start_date: 2017-09
+        end_date: 2021-06
+        highlights:
+          - Graduation June 2021
+          - "GPA: 4.17"
+
+    experience:
+      - company: Health Research Institute, School of Nursing, UNBC
+        position: Knowledge Synthesis Research Assistant
+        location: Prince George, BC
+        start_date: 2025-01
+        end_date: present
+        highlights:
+          - Conduct scoping reviews to inform evidence-informed decision-making for internal publications and Northern Health collaborations
+          - Synthesize large datasets into actionable reports for stakeholders
+          - Manage and structure data for consistent and accurate reporting between interdisciplinary team members
+
+      - company: University of Northern British Columbia
+        position: Sessional University Instructor
+        location: Prince George, BC
+        start_date: 2025-01
+        end_date: present
+        summary: "HHSC 305/306 – Human Physiology I/II · Undergraduate"
+        highlights:
+          - Design comprehensive curriculums, learning aides, and assessment strategies to support adult learners
+          - Prepare and deliver lectures, and provide individual support and tutoring
+
+      - company: University of Northern British Columbia
+        position: Lead Research Ambassador
+        location: Prince George, BC
+        start_date: 2021-09
+        end_date: 2025-04
+        highlights:
+          - Managed projects and events, focusing on research-oriented workshops for undergraduate students
+          - Collaborated with Student Recruitment and other offices on community outreach initiatives
+          - Developed detailed operational reports and manuals to guide and support future cohorts
+
+      - company: University of Northern British Columbia
+        position: Graduate Teaching Assistant
+        location: Prince George, BC
+        start_date: 2021-09
+        end_date: present
+        summary: "HHSC 305 – Human Physiology I; HHSC 101 – Intro to HHSc; HHSC 201 – Ethics and Law in Health Care · Undergraduate"
+        highlights:
+          - Prepared, invigilated, and graded exams
+          - Assisted with and taught lecture classes
+
+      - company: University of Northern British Columbia
+        position: Research Assistant
+        location: Prince George, BC
+        start_date: 2021-12
+        end_date: 2022-12
+        highlights:
+          - Independently organized and conducted a scoping review focusing on rural physicians
+          - Coordinated a team of undergraduate student volunteers
+
+    research:
+      - name: Graduate Thesis
+        date: 2023-09
+        end_date: present
+        location: Northern BC Near-Infrared Spectroscopy Research Laboratory (NBC NIRS Lab), UNBC
+        summary: Use near-infrared spectroscopy to investigate cortical hemodynamic indicators of meditation-induced analgesia
+
+      - name: Honours Thesis
+        date: 2020-09
+        end_date: 2021-06
+        location: Northern BC Near-Infrared Spectroscopy Research Laboratory (NBC NIRS Lab), UNBC
+        highlights:
+          - Wrote literature reviews, conducted data analysis, and completed two separate manuscripts on research projects for which data collection was previously conducted
+          - Monitored cortical hemodynamic responses to meditation in experienced and novice meditators
+          - Observed the effects of detraining on respiratory and skeletal muscles in varsity soccer players
+          - Processed, extrapolated, and interpreted the results of large datasets
+
+      - name: Undergraduate Research Experience Award
+        date: 2020-05
+        end_date: 2020-08
+        location: Northern BC Near-Infrared Spectroscopy Research Laboratory, UNBC
+        highlights:
+          - Assisted with research on the application of NIRS technology to monitoring bone hemodynamics
+          - Contributed to research planning and instrumentation testing
+          - Conducted a small-scale literature review on bone tissue properties, wrote an annotated bibliography, and compiled findings into a presentable format
+
+    presentations:
+      - name: "Poster Presentation on Master's Thesis Research"
+        summary: 6th International Mobile Brain/Body Imaging Conference
+        location: Berlin, Germany
+        date: 2026-08
+
+      - name: "Poster Presentation on Drinking Water Assessment and Analysis Techniques"
+        summary: 5th Aquaphotomics International Conference
+        location: Kobe University, Japan
+        date: 2025-05
+
+      - name: Mitacs & Japan Society for the Promotion of Science Fellowship
+        summary: Aquaphotomics Research Field, Kobe University
+        location: Kobe, Japan
+        date: 2024-05
+        end_date: 2024-08
+        highlights:
+          - Used near-infrared spectroscopy and specialized analysis techniques to investigate water-light interactions and drinking water quality
+          - Presented a seminar to commercial stakeholders and fellow researchers
+          - Represented the Canadian cohort of researchers as a speaker at the JSPS program closing ceremony
+
+      - name: Three-Minute-Thesis Competition
+        summary: UNBC
+        location: Prince George, BC
+        date: 2024-01
+        highlights:
+          - Delivered a concise, informative presentation on master's research and received high marks from judges
+
+    volunteer:
+      - company: University of Northern British Columbia
+        position: Adventures in Healthcare Workshop Leader
+        location: Prince George, BC
+        start_date: 2025-04
+        end_date: present
+        highlights:
+          - Leading high school classes through educational dissection workshops both locally and regionally
+
+      - company: University of Northern British Columbia
+        position: Substitute Lecturer – HHSC 306 (Human Physiology II)
+        location: Prince George, BC
+        start_date: 2023-01
+        end_date: 2023-04
+        highlights:
+          - Presented a lecture and assisted with exam grading
+
+      - company: GenomeBC "Geneskool" UNBC Summer Science Camp
+        position: Science Camp Group Leader and Lecturer
+        location: Prince George, BC
+        start_date: 2023-05
+        end_date: 2023-08
+        highlights:
+          - Guided high school students to complete forensics-themed science activities in a university laboratory
+          - Prepared and presented concise lectures on fingerprinting and blood typing
