@@ -15,7 +15,7 @@ concurrency:
   cancel-in-progress: true
 
 # Self-contained deploy: uses the ahzs645/portfolioThemes engine but builds for
-# the custom apex domain (julianstokes.ca) at the ROOT path. The reusable
+# the custom domain (www.julianstokes.ca) at the ROOT path. The reusable
 # workflow auto-derives the base path from GitHub (which would be "/resume/" for
 # a project page), so we inline the steps here to force VITE_BASE_PATH=/ and
 # publish a CNAME for the custom domain.
@@ -65,7 +65,7 @@ jobs:
           VITE_BASE_PATH: '/'
 
       - name: Add CNAME for custom domain
-        run: echo 'julianstokes.ca' > .portfolio-engine/dist/CNAME
+        run: echo 'www.julianstokes.ca' > .portfolio-engine/dist/CNAME
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
