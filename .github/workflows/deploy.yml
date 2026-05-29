@@ -10,10 +10,75 @@ permissions:
   pages: write
   id-token: write
 
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+# Self-contained deploy: uses the ahzs645/portfolioThemes engine but builds for
+# the custom apex domain (julianstokes.ca) at the ROOT path. The reusable
+# workflow auto-derives the base path from GitHub (which would be "/resume/" for
+# a project page), so we inline the steps here to force VITE_BASE_PATH=/ and
+# publish a CNAME for the custom domain.
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout resume content
+        uses: actions/checkout@v4
+
+      - name: Checkout portfolioThemes engine
+        uses: actions/checkout@v4
+        with:
+          repository: ahzs645/portfolioThemes
+          path: .portfolio-engine
+
+      - name: Copy CV file
+        run: |
+          cp CV.yaml .portfolio-engine/public/CV.yaml
+          echo "✓ Copied CV.yaml"
+
+      - name: Configure theme settings (random theme, no theme bar)
+        run: |
+          ENV_FILE=".portfolio-engine/.env.production"
+          echo "VITE_THEME_SELECTION_MODE=random" >  "$ENV_FILE"
+          echo "VITE_SHOW_THEME_BAR=false"         >> "$ENV_FILE"
+          cat "$ENV_FILE"
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: .portfolio-engine/package-lock.json
+
+      - name: Install dependencies
+        working-directory: .portfolio-engine
+        run: npm ci
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Build (root base path for custom domain)
+        working-directory: .portfolio-engine
+        run: npm run build
+        env:
+          VITE_BASE_PATH: '/'
+
+      - name: Add CNAME for custom domain
+        run: echo 'julianstokes.ca' > .portfolio-engine/dist/CNAME
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .portfolio-engine/dist
+
   deploy:
-    uses: ahzs645/portfolioThemes/.github/workflows/deploy-portfolio.yml@main
-    with:
-      cv-file: 'CV.yaml'
-      # random-static => random theme on every fresh load, no theme switcher bar
-      build-mode: 'random-static'
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
