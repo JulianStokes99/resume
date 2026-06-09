@@ -28,4 +28,4 @@ After that, every push to `main` redeploys. You can also trigger it manually fro
 
 ## Updating content
 
-Edit `CV.yaml`, commit, and push to `main`.
+Edit `CV.yaml`, commit, and push to `main`
