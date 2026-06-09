@@ -42,6 +42,7 @@ jobs:
           ENV_FILE=".portfolio-engine/.env.production"
           echo "VITE_THEME_SELECTION_MODE=random" >  "$ENV_FILE"
           echo "VITE_SHOW_THEME_BAR=false"         >> "$ENV_FILE"
+          echo "VITE_RANDOM_THEME_REFRESH_HOLD=0"      >> "$ENV_FILE" 
           # Pin the URL to "/" and never expose theme-slug sub-pages
           echo "VITE_LOCK_ROUTE=true"              >> "$ENV_FILE"
           cat "$ENV_FILE"
